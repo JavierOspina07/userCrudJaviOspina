@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from 'axios'
 
 const useFetch = (baseUrl) => {
   const [infoApi, setInfoApi] = useState();
@@ -23,13 +24,13 @@ const useFetch = (baseUrl) => {
       .catch((err) => console.log(err));
   };
   //DELETE
-  const deleteApi = () => {
-    const url = `${baseUrl}${path}/${id}/`;
+  const deleteApi = (path, id) => {
+    const url = `${baseUrl}${path}/${id}/`
     axios
       .delete(url)
       .then((res) => {
         console.log(res.data);
-        const infoApiFilter = infoApi.filter((e) => e.id != id);
+        const infoApiFilter = infoApi.filter((e) => e.id != id)
         setInfoApi(infoApiFilter);
       })
       .catch((err) => console.log(err));
