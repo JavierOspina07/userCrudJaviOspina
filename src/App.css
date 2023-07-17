@@ -1,4 +1,11 @@
 
+.users__list {
+  /* Asegurarnos de que el contenedor sea un contenedor flexible */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 
 .users__title {
   display: flex;
@@ -20,12 +27,6 @@
   flex-wrap: wrap; /* Permite que los elementos del formulario se ajusten en varias filas */
   justify-content: space-between;
   align-items: center;
-}
-
-.users {
-  /* Asegurarnos de que el contenedor sea un contenedor flexible */
-  display: flex;
-  flex-direction: column;
 }
 
 .users__header {

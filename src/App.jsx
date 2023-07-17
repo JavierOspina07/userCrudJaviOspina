@@ -27,37 +27,36 @@ function App() {
 
   return (
     <div className="users">
-  <div className="users__header">
-    <h1 className="users__title">Users</h1>
-    <button
-      onClick={handleOpenForm}
-      className="users__form-button formuser__btn-open-form"
-    >
-      Open Form
-    </button>
-  </div>
-  <FormUser
-    createNewUser={createNewUser}
-    updateInfo={updateInfo}
-    updateUserById={updateUserById}
-    setUpdateInfo={setUpdateInfo}
-    closeForm={closeForm}
-    setCloseForm={setCloseForm}
-  />
-  <div className="users__list">
-    {users?.map((user) => (
-      <UserCard
-        key={user.id}
-        user={user}
-        deleteUserById={deleteUserById}
+      <div className="users__header">
+        <h1 className="users__title">Users</h1>
+        <button
+          onClick={handleOpenForm}
+          className="users__form-button formuser__btn-open-form"
+        >
+          Open Form
+        </button>
+      </div>
+      <FormUser
+        createNewUser={createNewUser}
+        updateInfo={updateInfo}
+        updateUserById={updateUserById}
         setUpdateInfo={setUpdateInfo}
-        handleOpenForm={handleOpenForm}
+        closeForm={closeForm}
+        setCloseForm={setCloseForm}
       />
-    ))}
-  </div>
-</div>
-
-);
+      <div className="users__list">
+        {users?.map((user) => (
+          <UserCard
+            key={user.id}
+            user={user}
+            deleteUserById={deleteUserById}
+            setUpdateInfo={setUpdateInfo}
+            handleOpenForm={handleOpenForm}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default App;
