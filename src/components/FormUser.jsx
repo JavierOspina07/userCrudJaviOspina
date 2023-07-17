@@ -8,7 +8,7 @@ const FormUser = ({
   updateUserById,
   setUpdateInfo,
   closeForm,
-  setCloseForm
+  setCloseForm,
 }) => {
   const { register, reset, handleSubmit } = useForm();
 
@@ -20,7 +20,9 @@ const FormUser = ({
     updateInfo
       ? /* Update */ (updateUserById("/users", updateInfo.id, data),
         setUpdateInfo())
-      : /* Create */ createNewUser("/users", data);
+      : /* Create */
+        createNewUser("/users", data);
+
     reset({
       first_name: "",
       last_name: "",
@@ -31,7 +33,7 @@ const FormUser = ({
   };
 
   const handleCloseForm = () => {
-    setCloseForm(true)
+    setCloseForm(true);
   };
 
   return (
@@ -47,7 +49,9 @@ const FormUser = ({
         <h2 className="formuser__title">
           {updateInfo ? "Update" : "New User"}
         </h2>
-        <div onClick={handleCloseForm} className="formuser__close">x</div>
+        <div onClick={handleCloseForm} className="formuser__close">
+          x
+        </div>
         <div className="formuser__group">
           <label className="formuser__label" htmlFor="first_name">
             First Name
@@ -57,6 +61,7 @@ const FormUser = ({
             className="formuser__input"
             type="text"
             id="first_name"
+            placeholder="Ex: Carlos Alberto"
           />
         </div>
         <div className="formuser__group">
@@ -68,6 +73,7 @@ const FormUser = ({
             className="formuser__input"
             type="text"
             id="last_name"
+            placeholder="Ex: Gonzalez Alvarez"
           />
         </div>
         <div className="formuser__group">
@@ -79,6 +85,7 @@ const FormUser = ({
             className="formuser__input"
             type="email"
             id="email"
+            placeholder="ej@example.com"
           />
         </div>
         <div className="formuser__group">
@@ -90,6 +97,7 @@ const FormUser = ({
             className="formuser__input"
             type="password"
             id="password"
+            placeholder="alphanumeric"
           />
         </div>
         <div className="formuser__group">

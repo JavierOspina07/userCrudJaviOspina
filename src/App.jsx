@@ -13,7 +13,9 @@ function App() {
     useFetch(
       baseUrl,
       setCloseForm
-    ); /* el setCloseForm al no ser useFetch un parametro se debe pasar como callback */
+    ); /* el setCloseForm: al no ser useFetch un componente se debe pasar como callback */
+
+
 
   useEffect(() => {
     getAllUsers("/users");
@@ -24,6 +26,7 @@ function App() {
   const handleOpenForm = () => {
     setCloseForm(false);
   };
+
 
   return (
     <div className="users">
