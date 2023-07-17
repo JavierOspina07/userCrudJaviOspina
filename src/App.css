@@ -41,6 +41,11 @@
   align-items: center;
 }
 
+.users__form-button:hover{
+  filter: brightness(1.2);
+  box-shadow: 0 0 20px rgba(1, 71, 146, 0.8);
+}
+
 /* Media query para pantallas más pequeñas, por ejemplo, tablets y smartphones */
 @media screen and (max-width: 768px) {
   .users__title {
