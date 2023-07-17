@@ -1,7 +1,4 @@
-.users__list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
+
 
 .users__title {
   display: flex;
@@ -18,6 +15,13 @@
   padding-left: 0.4em;
 }
 
+.users__form {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos del formulario se ajusten en varias filas */
+  justify-content: space-between;
+  align-items: center;
+}
+
 .users {
   /* Asegurarnos de que el contenedor sea un contenedor flexible */
   display: flex;
@@ -25,11 +29,9 @@
 }
 
 .users__header {
-  /* Alinear elementos en una misma línea con espacio entre ellos */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px; /* Opcional, para agregar un espacio entre el título y la lista de usuarios */
 }
 
 .users__form-button {
