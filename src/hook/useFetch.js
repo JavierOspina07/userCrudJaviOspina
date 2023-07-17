@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios'
 
-const useFetch = (baseUrl) => {
+const useFetch = (baseUrl, setCloseForm) => {
   const [infoApi, setInfoApi] = useState();
 
   //GET
@@ -19,7 +19,8 @@ const useFetch = (baseUrl) => {
       .post(url, data)
       .then((res) => {
         console.log(res.data);
-        setInfoApi(...setInfoApi, res.data);
+        setInfoApi([...infoApi, res.data ])
+        setCloseForm(true) /* se cierra cuando se agrega información  */
       })
       .catch((err) => console.log(err));
   };
@@ -44,6 +45,7 @@ const useFetch = (baseUrl) => {
         console.log(res.data)
         const infoApiMapped = infoApi.map(e => e.id === id ? res.data : e)
         setInfoApi(infoApiMapped)
+        setCloseForm(true) /* se cierra cuando se actualiza informacion */
       })
       .catch((err) => console.log(err));
   };

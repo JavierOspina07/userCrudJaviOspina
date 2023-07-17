@@ -1,0 +1,88 @@
+.user-profile {
+  width: 23.8125em;
+  height: 17.125em;
+  border-radius: 0.25em;
+  border: 0.0625em solid #e5e5e5;
+  background: #fff;
+  margin: 1.25em;
+  padding: 1em;
+}
+
+.user-profile__name {
+  display: flex;
+  width: 21.1875em;
+  height: 2.125em;
+  flex-direction: column;
+  justify-content: center;
+  color: #0f0f2d;
+  font-size: 1.5625em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  max-width: 100%;
+  word-break: normal;
+  font-size: 1.25em;
+}
+
+.user-profile__divider {
+  width: 21.3125em;
+  height: 0em;
+  flex-shrink: 0;
+  stroke-width: 0.03125em;
+  stroke: #e5e5e5;
+  opacity: 0.5;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.user-profile__label {
+  display: flex;
+  width: 12.375em;
+  height: 1.375em;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #d3d3d3;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.user-profile__value {
+  display: flex;
+  width: 21.3125em;
+  height: 1.5em;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #302f2f;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.user-profile__footer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-profile__delete-button{
+  width: 3.5em;
+  height: 3.5em;
+  background-color: #D85D5D;
+  color: white;
+  border-radius: 0.5em;
+  margin: 0.5em;
+}
+
+.user-profile__update-button{
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 0.5em;
+  margin: 0.5em;
+  background-color: #F6F6F6;
+  color: rgb(141, 135, 135);
+}

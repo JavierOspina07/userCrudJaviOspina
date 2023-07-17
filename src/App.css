@@ -1,0 +1,52 @@
+.users__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.users__title {
+  display: flex;
+  width: 1em;
+  height: 3em;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #0f0f2d;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-left: 0.4em;
+}
+
+.users {
+  /* Asegurarnos de que el contenedor sea un contenedor flexible */
+  display: flex;
+  flex-direction: column;
+}
+
+.users__header {
+  /* Alinear elementos en una misma línea con espacio entre ellos */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Opcional, para agregar un espacio entre el título y la lista de usuarios */
+}
+
+.users__form-button {
+  width: 10em;
+  display: flex;
+  height: 2em;
+  margin: 1em;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  background-image: linear-gradient(to bottom, rgb(1, 71, 146), #c2d4fc);
+  color: white;
+  outline: none;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
