@@ -90,7 +90,7 @@
 /* Estilos para .user-profile en pantallas más pequeñas, por ejemplo, tablets y smartphones */
 @media screen and (max-width: 768px) {
   .user-profile {
-    width: 100%; /* El perfil de usuario ocupará todo el ancho en pantallas más pequeñas */
+    width: 80%; /* El perfil de usuario ocupará todo el ancho en pantallas más pequeñas */
     height: auto; /* La altura se ajustará automáticamente según el contenido */
     margin: 0.5em; /* Reducir el margen para un mejor diseño en pantallas más pequeñas */
   }
