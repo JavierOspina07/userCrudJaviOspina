@@ -31,13 +31,13 @@ const UserCard = ({ user, deleteUserById, setUpdateInfo, handleOpenForm }) => {
               className="user-profile__delete-btn"
               onClick={handleDelete}
             >
-              <i className="bx bx-trash bx-sm"></i>
+              <i className="bx bx-trash bx-sm bx-tada-hover" ></i>
             </button>
             <button
               className="user-profile__update-btn"
               onClick={handleUpdate}
             >
-              <i className="bx bxs-pencil bx-sm"></i>
+              <i className="bx bxs-pencil bx-sm bx-tada-hover"></i>
             </button>
           </footer>
         </article>
