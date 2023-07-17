@@ -86,3 +86,38 @@
   background-color: #F6F6F6;
   color: rgb(141, 135, 135);
 }
+
+/* Estilos para .user-profile en pantallas más pequeñas, por ejemplo, tablets y smartphones */
+@media screen and (max-width: 768px) {
+  .user-profile {
+    width: 100%; /* El perfil de usuario ocupará todo el ancho en pantallas más pequeñas */
+    height: auto; /* La altura se ajustará automáticamente según el contenido */
+    margin: 0.5em; /* Reducir el margen para un mejor diseño en pantallas más pequeñas */
+  }
+  
+  .user-profile__name {
+    font-size: 1.25em; /* Reducir el tamaño de fuente del nombre del usuario */
+  }
+
+  .user-profile__label,
+  .user-profile__value {
+    width: 100%; /* Los elementos ocuparán todo el ancho disponible en pantallas pequeñas */
+  }
+
+  .user-profile__divider {
+    width: 100%; /* El divisor ocupará todo el ancho disponible en pantallas pequeñas */
+  }
+
+  .user-profile__footer {
+    justify-content: center; /* Centrar los botones en la parte inferior del perfil en pantallas pequeñas */
+    flex-direction: column; /* Cambiar la dirección del flexbox a columna en pantallas pequeñas */
+    align-items: center; /* Centrar los botones horizontalmente */
+  }
+
+  .user-profile__delete-button,
+  .user-profile__update-button {
+    width: 100%; /* Los botones ocuparán todo el ancho disponible en pantallas pequeñas */
+    max-width: 8em; /* Establecer un ancho máximo para evitar que los botones sean demasiado grandes */
+    margin: 0.5em 0; /* Reducir el margen vertical entre los botones */
+  }
+}

@@ -3,6 +3,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  padding: 1em;
 }
 
 /* Estilos para la lista de usuarios */
@@ -18,6 +20,7 @@
   font-size: 50px; 
   font-style: normal;
   line-height: normal; 
+  
 }
 
 
@@ -38,27 +41,15 @@
   align-items: center;
 }
 
-/* Media queries para dispositivos más pequeños */
-@media (max-width: 768px) {
-  .users__list {
-    justify-content: flex-start; /* Alinear elementos a la izquierda en dispositivos pequeños */
-  }
-
+/* Media query para pantallas más pequeñas, por ejemplo, tablets y smartphones */
+@media screen and (max-width: 768px) {
   .users__title {
-    font-size: 30px; /* Reducir el tamaño del título en dispositivos pequeños */
-    height: 2em; /* Ajustar la altura del título en dispositivos pequeños */
+    font-size: 30px;
   }
-
-  .users__form {
-    flex-direction: column; /* Alinear elementos del formulario en columna en dispositivos pequeños */
-  }
-
-  .users__form-input {
-    max-width: 100%; /* El ancho del campo de entrada ocupará todo el espacio disponible */
-  }
-
+  
   .users__form-button {
-    width: 100%; /* El botón ocupará todo el ancho disponible */
-    margin: 0.5em 0; /* Ajustar los márgenes del botón */
+    width: 25%; 
+    font-size: 0.8rem; 
+    margin: 0.5em; 
   }
 }
