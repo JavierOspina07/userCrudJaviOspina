@@ -24,7 +24,7 @@
 }
 
 
-.users__form-button {
+.users__form-btn {
   width: 10em;
   height: 2em;
   margin: 1em;
@@ -41,7 +41,7 @@
   align-items: center;
 }
 
-.users__form-button:hover{
+.users__form-btn:hover{
   filter: brightness(1.2);
   box-shadow: 0 0 20px rgba(1, 71, 146, 0.8);
 }
@@ -52,7 +52,7 @@
     font-size: 30px;
   }
   
-  .users__form-button {
+  .users__form-btn {
     width: 25%; 
     font-size: 0.8rem; 
     margin: 0.5em; 

@@ -31,7 +31,7 @@ function App() {
         <h1 className="users__title">Users</h1>
         <button
           onClick={handleOpenForm}
-          className="users__form-button formuser__btn-open-form"
+          className="users__form-btn formuser__btn-open-form"
         >
           Open Form
         </button>

@@ -69,7 +69,7 @@
   justify-content: flex-end;
 }
 
-.user-profile__delete-button{
+.user-profile__delete-btn{
   width: 3.5em;
   height: 3.5em;
   background-color: #D85D5D;
@@ -78,7 +78,7 @@
   margin: 0.5em;
 }
 
-.user-profile__update-button{
+.user-profile__update-btn{
   width: 3.5em;
   height: 3.5em;
   border-radius: 0.5em;
@@ -112,8 +112,8 @@
     gap: 1em;
   }
 
-  .user-profile__delete-button,
-  .user-profile__update-button {
+  .user-profile__delete-btn,
+  .user-profile__update-btn {
     max-width: 8em; /* Establecer un ancho máximo para evitar que los botones sean demasiado grandes */
     margin: 0.5em 0; /* Reducir el margen vertical entre los botones */
   }
