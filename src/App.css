@@ -1,43 +1,28 @@
+/* Estilos generales */
+.users__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
+/* Estilos para la lista de usuarios */
 .users__list {
-  /* Asegurarnos de que el contenedor sea un contenedor flexible */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-
 .users__title {
   display: flex;
-  width: 1em;
-  height: 3em;
-  flex-direction: column;
-  justify-content: center;
-  flex-shrink: 0;
   color: #0f0f2d;
-  font-size: 50px;
+  font-size: 50px; 
   font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  padding-left: 0.4em;
+  line-height: normal; 
 }
 
-.users__form {
-  display: flex;
-  flex-wrap: wrap; /* Permite que los elementos del formulario se ajusten en varias filas */
-  justify-content: space-between;
-  align-items: center;
-}
-
-.users__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .users__form-button {
   width: 10em;
-  display: flex;
   height: 2em;
   margin: 1em;
   font-size: 1rem;
@@ -53,3 +38,27 @@
   align-items: center;
 }
 
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .users__list {
+    justify-content: flex-start; /* Alinear elementos a la izquierda en dispositivos pequeños */
+  }
+
+  .users__title {
+    font-size: 30px; /* Reducir el tamaño del título en dispositivos pequeños */
+    height: 2em; /* Ajustar la altura del título en dispositivos pequeños */
+  }
+
+  .users__form {
+    flex-direction: column; /* Alinear elementos del formulario en columna en dispositivos pequeños */
+  }
+
+  .users__form-input {
+    max-width: 100%; /* El ancho del campo de entrada ocupará todo el espacio disponible */
+  }
+
+  .users__form-button {
+    width: 100%; /* El botón ocupará todo el ancho disponible */
+    margin: 0.5em 0; /* Ajustar los márgenes del botón */
+  }
+}
