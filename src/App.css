@@ -12,6 +12,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  cursor: pointer;
+  outline: none;
 }
 
 .users__title {

@@ -90,31 +90,36 @@
 /* Estilos para .user-profile en pantallas más pequeñas, por ejemplo, tablets y smartphones */
 @media screen and (max-width: 768px) {
   .user-profile {
-    width: 80%; /* El perfil de usuario ocupará todo el ancho en pantallas más pequeñas */
-    height: auto; /* La altura se ajustará automáticamente según el contenido */
-    margin: 0.5em; /* Reducir el margen para un mejor diseño en pantallas más pequeñas */
+    width: 80%;
+    height: auto; 
+    margin: 0.5em; 
   }
   
   .user-profile__name {
-    font-size: 1.25em; /* Reducir el tamaño de fuente del nombre del usuario */
+    font-size: 1.25em; 
   }
 
   .user-profile__label,
   .user-profile__value {
-    width: 100%; /* Los elementos ocuparán todo el ancho disponible en pantallas pequeñas */
+    width: 100%;
   }
 
   .user-profile__divider {
-    width: 100%; /* El divisor ocupará todo el ancho disponible en pantallas pequeñas */
+    width: 100%; 
   }
 
   .user-profile__footer {
     gap: 1em;
   }
 
+  
+
   .user-profile__delete-btn,
   .user-profile__update-btn {
-    max-width: 8em; /* Establecer un ancho máximo para evitar que los botones sean demasiado grandes */
-    margin: 0.5em 0; /* Reducir el margen vertical entre los botones */
+    max-width: 8em; 
+    margin: 0.5em 0; 
+    outline: none;
+    cursor: pointer;
+    border: none;
   }
 }
