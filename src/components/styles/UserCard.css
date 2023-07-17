@@ -109,14 +109,11 @@
   }
 
   .user-profile__footer {
-    justify-content: center; /* Centrar los botones en la parte inferior del perfil en pantallas pequeñas */
-    flex-direction: column; /* Cambiar la dirección del flexbox a columna en pantallas pequeñas */
-    align-items: center; /* Centrar los botones horizontalmente */
+    gap: 1em;
   }
 
   .user-profile__delete-button,
   .user-profile__update-button {
-    width: 100%; /* Los botones ocuparán todo el ancho disponible en pantallas pequeñas */
     max-width: 8em; /* Establecer un ancho máximo para evitar que los botones sean demasiado grandes */
     margin: 0.5em 0; /* Reducir el margen vertical entre los botones */
   }
