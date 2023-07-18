@@ -25,7 +25,7 @@
     border-radius: 50px;
     transition: .5s;
     overflow: hidden;
-    transform: scale(.35);
+    transform: scale(.35); /* tamaño del boton */
     border: 1px solid rgba(255,255,255,.341)
   }
   
@@ -308,5 +308,27 @@
   }
 
  
- 
- 
+  @media (max-width: 320px) {
+    .toggle{
+      top: 0.5em;
+      transform: scale(.25); /* tamaño del boton */
+      bottom: 0.5em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .toggle{
+      top: 0.5em;
+      transform: scale(.25); /* tamaño del boton */
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    .toggle{
+      top: 0.5em;
+      transform: scale(.25); /* tamaño del boton */
+    }
+  }
+  
+  
+
