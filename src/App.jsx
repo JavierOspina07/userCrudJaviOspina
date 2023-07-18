@@ -6,8 +6,10 @@ import InfoMessage from "./components/InfoMessage";
 import { useState, useEffect } from "react";
 
 function App() {
+  const [closeInfo, setCloseInfo] = useState(true);
   const [closeForm, setCloseForm] = useState(true);
   const [updateInfo, setUpdateInfo] = useState();
+
   const baseUrl = "https://users-crud.academlo.tech";
   // estos son los mismos del useFetch pero los nombres depende del contexto ↓
   const [users, getAllUsers, createNewUser, deleteUserById, updateUserById] =
@@ -15,8 +17,6 @@ function App() {
       baseUrl,
       setCloseForm
     ); /* el setCloseForm: al no ser useFetch un componente se debe pasar como callback */
-
-
 
   useEffect(() => {
     getAllUsers("/users");
@@ -27,7 +27,6 @@ function App() {
   const handleOpenForm = () => {
     setCloseForm(false);
   };
-
 
   return (
     <div className="users">
@@ -40,7 +39,7 @@ function App() {
           Open Form
         </button>
       </div>
-      <InfoMessage/>
+      <InfoMessage closeInfo={closeInfo} />
       <FormUser
         createNewUser={createNewUser}
         updateInfo={updateInfo}

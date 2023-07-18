@@ -12,6 +12,10 @@
   transition: transform 200ms ease;
 }
 
+.close__info{
+    transform: scale(0);
+}
+
 .info-countainer {
   width: 100%;
   max-width: 400px;
@@ -21,6 +25,8 @@
   position: relative;
   margin: 1em;
 }
+
+
 
 .info__close-btn {
   position: absolute;
@@ -53,3 +59,4 @@
   filter: brightness(1.2);
   box-shadow: 0 0 20px rgba(1, 71, 146, 0.8);
 }
+

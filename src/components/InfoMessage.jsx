@@ -1,8 +1,11 @@
 import "./styles/InfoMessage.css";
+import  { useState } from 'react';
 
-const InfoMessage = () => {
+
+const InfoMessage = ({closeInfo}) => {
+    
   return (
-    <div className="info">
+    <div className={`info ${closeInfo && 'close__info'}`}>      
       <div className="info-countainer">
         <div className="info__close-btn">x</div>
         <h2 className="info__title">Delete user</h2>
