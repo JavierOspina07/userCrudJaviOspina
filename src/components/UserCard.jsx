@@ -1,8 +1,11 @@
 import "./styles/UserCard.css";
 
-const UserCard = ({ user, deleteUserById, setUpdateInfo, handleOpenForm }) => {
+const UserCard = ({ user, deleteUserById, setUpdateInfo, handleOpenForm, setCloseInfo, showDeleteMessage, }) => {
+  
   const handleDelete = () => {
     deleteUserById(`/users`, user.id);
+    setCloseInfo(false)
+    showDeleteMessage(`${user.first_name} ${user.last_name}`);
   };
 
   const handleUpdate = () => {
@@ -11,7 +14,7 @@ const UserCard = ({ user, deleteUserById, setUpdateInfo, handleOpenForm }) => {
   };
 
   return (
-      <div className="user-profile">
+      <div  className="user-profile">
         <article className="user-profile__info">
           <h2 className="user-profile__name">{`${user.first_name} ${user.last_name}`}</h2>
           <hr className="user-profile__divider" />

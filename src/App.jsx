@@ -9,7 +9,6 @@ function App() {
   const [closeInfo, setCloseInfo] = useState(true);
   const [closeForm, setCloseForm] = useState(true);
   const [updateInfo, setUpdateInfo] = useState();
-
   const baseUrl = "https://users-crud.academlo.tech";
   // estos son los mismos del useFetch pero los nombres depende del contexto ↓
   const [users, getAllUsers, createNewUser, deleteUserById, updateUserById] =
@@ -22,11 +21,26 @@ function App() {
     getAllUsers("/users");
   }, []);
 
-  console.log(users);
+  const [deletedUserName, setDeletedUserName] = useState();
+  const [addedUserName, setAddedUserName] = useState(); 
 
   const handleOpenForm = () => {
     setCloseForm(false);
   };
+
+  const showDeleteMessage = (userName) => {
+    setDeletedUserName(userName);
+    setAddedUserName(); 
+    setCloseInfo(false); 
+  };
+
+  const showInfoMessage = (userName) => {
+    setAddedUserName(userName);
+    setDeletedUserName();
+    setCloseInfo(false); 
+  };
+
+
 
   return (
     <div className="users">
@@ -39,7 +53,14 @@ function App() {
           Open Form
         </button>
       </div>
-      <InfoMessage closeInfo={closeInfo} />
+
+      <InfoMessage
+        closeInfo={closeInfo}
+        setCloseInfo={setCloseInfo}
+        deletedUserName={deletedUserName}
+        addedUserName={addedUserName}
+      />
+
       <FormUser
         createNewUser={createNewUser}
         updateInfo={updateInfo}
@@ -47,7 +68,9 @@ function App() {
         setUpdateInfo={setUpdateInfo}
         closeForm={closeForm}
         setCloseForm={setCloseForm}
+        showInfoMessage ={showInfoMessage }
       />
+
       <div className="users__list">
         {users?.map((user) => (
           <UserCard
@@ -56,6 +79,10 @@ function App() {
             deleteUserById={deleteUserById}
             setUpdateInfo={setUpdateInfo}
             handleOpenForm={handleOpenForm}
+            closeInfo={closeInfo}
+            setCloseInfo={setCloseInfo}
+            showDeleteMessage={showDeleteMessage}
+            
           />
         ))}
       </div>

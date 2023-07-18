@@ -9,6 +9,7 @@ const FormUser = ({
   setUpdateInfo,
   closeForm,
   setCloseForm,
+  showInfoMessage,
 }) => {
   const { register, reset, handleSubmit } = useForm();
 
@@ -21,7 +22,7 @@ const FormUser = ({
       ? /* Update */ (updateUserById("/users", updateInfo.id, data),
         setUpdateInfo())
       : /* Create */
-      createNewUser("/users", data);
+        createNewUser("/users", data);
 
     reset({
       first_name: "",
@@ -30,6 +31,10 @@ const FormUser = ({
       password: "",
       birthday: "",
     });
+    // Llamada a showInfoMessage para mostrar el mensaje de InfoMessage
+    if (!updateInfo) {
+      showInfoMessage(`${data.first_name} ${data.last_name}`);
+    }
   };
 
   const handleCloseForm = () => {

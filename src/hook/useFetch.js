@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const useFetch = (baseUrl, setCloseForm) => {
   const [infoApi, setInfoApi] = useState();
+  const [users, setUsers] = useState();
 
   //GET
   const getApi = (path) => {
