@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     getAllUsers("/users");
-  }, []);
+  }, []); 
 
   const [deletedUserName, setDeletedUserName] = useState();
   const [addedUserName, setAddedUserName] = useState(); 
