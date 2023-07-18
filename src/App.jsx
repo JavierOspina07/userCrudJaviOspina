@@ -6,11 +6,14 @@ import InfoMessage from "./components/InfoMessage";
 import { useState, useEffect } from "react";
 
 function App() {
+  /* comportamientos de la visualizacion de la informacion */
   const [closeInfo, setCloseInfo] = useState(true);
   const [closeForm, setCloseForm] = useState(true);
   const [updateInfo, setUpdateInfo] = useState();
+  /* manejo del baseUrl */
   const baseUrl = "https://users-crud.academlo.tech";
   const [deletedUserName, setDeletedUserName] = useState();
+  /* modificaciones en el modal de agregar, eliminar, actualizar usuario */
   const [addedUserName, setAddedUserName] = useState();
   const [updateUserName, setUpdateUserName] = useState();
   // estos son los mismos del useFetch pero los nombres depende del contexto ↓
@@ -20,11 +23,11 @@ function App() {
       setCloseForm
     ); /* el setCloseForm: al no ser useFetch un componente se debe pasar como callback */
 
-
+   /* visualizacion del formulario */ 
   const handleOpenForm = () => {
     setCloseForm(false);
   };
-
+  /* visualizacion de mensajes informativos */
   const showDeleteMessage = (userName) => {
     setDeletedUserName(userName);
     setAddedUserName();
@@ -45,6 +48,8 @@ function App() {
     setAddedUserName();
     setCloseInfo(false);
   };
+
+  /* mostar usuarios en la pantalla */
 
   useEffect(() => {
     getAllUsers("/users");
