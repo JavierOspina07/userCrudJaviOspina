@@ -5,6 +5,7 @@ const InfoMessage = ({
   setCloseInfo,
   deletedUserName,
   addedUserName,
+  updateUserName,
 }) => {
   const handleCloseInfo = () => {
     setCloseInfo(true);
@@ -20,12 +21,23 @@ const InfoMessage = ({
           x
         </div>
         <h2 className="info__title">
-          {deletedUserName ? "User deleted" : "User added"}
+          {deletedUserName 
+            ? "User deleted" 
+            : addedUserName
+            ? "User added"  
+            : updateUserName
+            ? "User updated"
+            : ""
+          }
         </h2>
         <p className="info__message">
           {deletedUserName
             ? `User ${deletedUserName} has been removed`
-            : `User ${addedUserName} has been added`
+            : addedUserName
+            ? `User ${addedUserName} has been added`
+            : updateUserName
+            ? `User ${updateUserName} has been updated`
+            : ""
           }
         </p>
         <button onClick={handleCloseInfo} className="info__btn">

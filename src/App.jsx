@@ -23,6 +23,7 @@ function App() {
 
   const [deletedUserName, setDeletedUserName] = useState();
   const [addedUserName, setAddedUserName] = useState(); 
+  const [updateUserName, setUpdateUserName] = useState()
 
   const handleOpenForm = () => {
     setCloseForm(false);
@@ -39,6 +40,11 @@ function App() {
     setDeletedUserName();
     setCloseInfo(false); 
   };
+
+  const showInfoMessageupdate = (userName) => { 
+    setUpdateUserName(userName);
+    setCloseInfo(false)
+   }
 
 
 
@@ -59,6 +65,7 @@ function App() {
         setCloseInfo={setCloseInfo}
         deletedUserName={deletedUserName}
         addedUserName={addedUserName}
+        updateUserName={updateUserName}
       />
 
       <FormUser
@@ -68,7 +75,8 @@ function App() {
         setUpdateInfo={setUpdateInfo}
         closeForm={closeForm}
         setCloseForm={setCloseForm}
-        showInfoMessage ={showInfoMessage }
+        showInfoMessage ={showInfoMessage}
+        showInfoMessageupdate ={showInfoMessageupdate}
       />
 
       <div className="users__list">
