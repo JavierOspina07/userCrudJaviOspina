@@ -10,6 +10,9 @@ function App() {
   const [closeForm, setCloseForm] = useState(true);
   const [updateInfo, setUpdateInfo] = useState();
   const baseUrl = "https://users-crud.academlo.tech";
+  const [deletedUserName, setDeletedUserName] = useState();
+  const [addedUserName, setAddedUserName] = useState();
+  const [updateUserName, setUpdateUserName] = useState();
   // estos son los mismos del useFetch pero los nombres depende del contexto ↓
   const [users, getAllUsers, createNewUser, deleteUserById, updateUserById] =
     useFetch(
@@ -17,13 +20,6 @@ function App() {
       setCloseForm
     ); /* el setCloseForm: al no ser useFetch un componente se debe pasar como callback */
 
-  useEffect(() => {
-    getAllUsers("/users");
-  }, []); 
-
-  const [deletedUserName, setDeletedUserName] = useState();
-  const [addedUserName, setAddedUserName] = useState(); 
-  const [updateUserName, setUpdateUserName] = useState()
 
   const handleOpenForm = () => {
     setCloseForm(false);
@@ -31,22 +27,28 @@ function App() {
 
   const showDeleteMessage = (userName) => {
     setDeletedUserName(userName);
-    setAddedUserName(); 
-    setCloseInfo(false); 
+    setAddedUserName();
+    setUpdateUserName();
+    setCloseInfo(false);
   };
 
   const showInfoMessage = (userName) => {
     setAddedUserName(userName);
     setDeletedUserName();
-    setCloseInfo(false); 
+    setUpdateUserName();
+    setCloseInfo(false);
   };
 
-  const showInfoMessageupdate = (userName) => { 
+  const showInfoMessageupdate = (userName) => {
     setUpdateUserName(userName);
-    setCloseInfo(false)
-   }
+    setDeletedUserName();
+    setAddedUserName();
+    setCloseInfo(false);
+  };
 
-
+  useEffect(() => {
+    getAllUsers("/users");
+  }, []);
 
   return (
     <div className="users">
@@ -75,8 +77,8 @@ function App() {
         setUpdateInfo={setUpdateInfo}
         closeForm={closeForm}
         setCloseForm={setCloseForm}
-        showInfoMessage ={showInfoMessage}
-        showInfoMessageupdate ={showInfoMessageupdate}
+        showInfoMessage={showInfoMessage}
+        showInfoMessageupdate={showInfoMessageupdate}
       />
 
       <div className="users__list">
