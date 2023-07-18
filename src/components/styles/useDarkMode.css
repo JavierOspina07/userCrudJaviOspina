@@ -330,5 +330,18 @@
     }
   }
   
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    .toggle{
+      top: 0.5em;
+      transform: scale(.25); /* tamaño del boton */
+    }
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    .toggle{
+      top: 0.5em;
+      transform: scale(.25); /* tamaño del boton */
+    }
+  }
   
 
