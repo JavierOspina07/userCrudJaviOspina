@@ -1,34 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
 * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-  }
-  h1, h2, h3, ul, hr {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  input {
-    outline: none;
-    font-family: inherit;
-  }
-  button {
-    font-family: inherit;
-    cursor: pointer;
-    border: none;
-  }
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+ul,
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+input {
+  outline: none;
+  font-family: inherit;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
 
-  /* Para el navegador Google Chrome y Microsoft Edge (basado en Chromium) */
+/* Para el navegador Google Chrome y Microsoft Edge (basado en Chromium) */
 /* Ocultar las barras de desplazamiento */
 body::-webkit-scrollbar {
   width: 0.5em;
+}
+/* ===== Dark Mode ===== */
+.dark-mode {
+  background-image: linear-gradient(to right, #000000, #111B22);
+}
+
+body.dark-mode .formuser {
+  background-image: linear-gradient(to right, #000000, #111B22);
+  color: white;
+}
+
+body.dark-mode .users__title {
+  color: white;
+}
+
+body.dark-mode .user-profile {
+  background-color: rgb(109, 115, 167);
+}
+
+body.dark-mode .info-countainer{
+  background-image: linear-gradient(to right, #000000, #111B22);
+  color: white;
 }
 
 /* Personalizar el color de las barras de desplazamiento */
