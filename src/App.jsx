@@ -82,7 +82,6 @@ function App() {
             closeInfo={closeInfo}
             setCloseInfo={setCloseInfo}
             showDeleteMessage={showDeleteMessage}
-            
           />
         ))}
       </div>

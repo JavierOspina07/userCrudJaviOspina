@@ -1,5 +1,4 @@
 import "./styles/InfoMessage.css";
-import { useState } from "react";
 
 const InfoMessage = ({
   closeInfo,
@@ -21,7 +20,7 @@ const InfoMessage = ({
           x
         </div>
         <h2 className="info__title">
-          {deletedUserName ? "Delete user" : "User added"}
+          {deletedUserName ? "User deleted" : "User added"}
         </h2>
         <p className="info__message">
           {deletedUserName
