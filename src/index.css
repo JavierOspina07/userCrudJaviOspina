@@ -24,3 +24,25 @@
     cursor: pointer;
     border: none;
   }
+
+  /* Para el navegador Google Chrome y Microsoft Edge (basado en Chromium) */
+/* Ocultar las barras de desplazamiento */
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* Personalizar el color de las barras de desplazamiento */
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(1, 71, 146, 0.8);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* Para el navegador Mozilla Firefox */
+/* Ocultar las barras de desplazamiento y mostrar solo cuando se haga scroll */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(1, 71, 146, 0.8) #f0f0f0;
+}

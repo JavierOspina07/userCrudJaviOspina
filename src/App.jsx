@@ -2,6 +2,7 @@ import "./App.css";
 import FormUser from "./components/FormUser";
 import UserCard from "./components/UserCard";
 import useFetch from "./hook/useFetch";
+import InfoMessage from "./components/InfoMessage";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           Open Form
         </button>
       </div>
+      <InfoMessage/>
       <FormUser
         createNewUser={createNewUser}
         updateInfo={updateInfo}

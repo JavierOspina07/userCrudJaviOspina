@@ -21,7 +21,7 @@ const FormUser = ({
       ? /* Update */ (updateUserById("/users", updateInfo.id, data),
         setUpdateInfo())
       : /* Create */
-        createNewUser("/users", data);
+      createNewUser("/users", data);
 
     reset({
       first_name: "",
