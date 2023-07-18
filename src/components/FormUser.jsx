@@ -34,6 +34,8 @@ const FormUser = ({
     // Llamada a showInfoMessage para mostrar el mensaje de InfoMessage
     if (!updateInfo) {
       showInfoMessage(`${data.first_name} ${data.last_name}`);
+    }else{
+      showInfoMessage(`${data.first_name} ${data.last_name}`)
     }
   };
 
