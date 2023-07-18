@@ -76,7 +76,7 @@ function App() {
         <input
           type="checkbox"
           id="hide-checkbox"
-          defaultChecked={darkMode}
+          defaultChecked={!darkMode}
           onChange={handleToggleDarkMode}
         />
         <label htmlFor="hide-checkbox" className="toggle">

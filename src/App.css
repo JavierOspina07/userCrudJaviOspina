@@ -55,8 +55,8 @@
   }
   
   .users__form-btn {
-    width: 25%; 
+    width: 50%; 
     font-size: 0.8rem; 
-    margin: 0.5em; 
+    margin: 0.2em; 
   }
 }

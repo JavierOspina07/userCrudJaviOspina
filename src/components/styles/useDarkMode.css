@@ -193,7 +193,7 @@
   }
   
   #hide-checkbox:checked+.toggle {
-    background: #24d7f719
+    background: #24D7F7
   }
   
   #hide-checkbox:checked+.toggle .toggle-button {
@@ -306,9 +306,6 @@
   p.morning {
     background: #e67e22
   }
-  
-  
-
 
  
  
