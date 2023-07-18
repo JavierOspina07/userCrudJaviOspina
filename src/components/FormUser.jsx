@@ -9,8 +9,8 @@ const FormUser = ({
   setUpdateInfo,
   closeForm,
   setCloseForm,
-  showInfoMessage,
-  showInfoMessageupdate
+  showAddMessage,
+  showUpdateMessage
 }) => {
   const { register, reset, handleSubmit } = useForm();
 
@@ -34,9 +34,9 @@ const FormUser = ({
     });
         // Llamada a showInfoMessage para mostrar el mensaje de InfoMessage
     if (!updateInfo) {
-      showInfoMessage(`${data.first_name} ${data.last_name}`);
+      showAddMessage(`${data.first_name} ${data.last_name}`);
     }else{
-      showInfoMessageupdate(`${data.first_name} ${data.last_name}`)
+      showUpdateMessage(`${data.first_name} ${data.last_name}`)
     }
 
   };

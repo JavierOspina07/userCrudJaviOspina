@@ -32,14 +32,14 @@ function App() {
     setCloseInfo(false);
   };
 
-  const showInfoMessage = (userName) => {
+  const showAddMessage = (userName) => {
     setAddedUserName(userName);
     setDeletedUserName();
     setUpdateUserName();
     setCloseInfo(false);
   };
 
-  const showInfoMessageupdate = (userName) => {
+  const showUpdateMessage = (userName) => {
     setUpdateUserName(userName);
     setDeletedUserName();
     setAddedUserName();
@@ -77,8 +77,8 @@ function App() {
         setUpdateInfo={setUpdateInfo}
         closeForm={closeForm}
         setCloseForm={setCloseForm}
-        showInfoMessage={showInfoMessage}
-        showInfoMessageupdate={showInfoMessageupdate}
+        showAddMessage={showAddMessage}
+        showUpdateMessage={showUpdateMessage}
       />
 
       <div className="users__list">
