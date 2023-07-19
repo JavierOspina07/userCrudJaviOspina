@@ -35,26 +35,39 @@ body::-webkit-scrollbar {
   width: 0.5em;
 }
 /* ===== Dark Mode ===== */
-.dark-mode {
-  background-image: linear-gradient(to right, #000000, #111B22);
-}
+body.dark-mode {
+  background-image: linear-gradient(to right, #000000, #111b22);
 
-body.dark-mode .formuser {
-  background-image: linear-gradient(to right, #000000, #111B22);
-  color: white;
-}
+  .formuser {
+    background-image: linear-gradient(to right, #000000, #111b22);
+    color: white;
+  }
 
-body.dark-mode .users__title {
-  color: white;
-}
+  .users__title {
+    color: white;
+  }
 
-body.dark-mode .user-profile {
-  background-color: rgb(109, 115, 167);
-}
+  .user-profile {
+    background-color: #21211c;
+    color: white;
+  }
 
-body.dark-mode .info-countainer{
-  background-image: linear-gradient(to right, #000000, #111B22);
-  color: white;
+  .info-countainer {
+    background-image: linear-gradient(to right, #000000, #111b22);
+    color: white;
+  }
+
+  .user-profile__name {
+    color: white;
+  }
+
+  .user-profile__label {
+    color: #fdfdfd;
+    font-weight: bold;
+  }
+  .user-profile__value {
+    color: rgb(146, 144, 144);
+  }
 }
 
 /* Personalizar el color de las barras de desplazamiento */
