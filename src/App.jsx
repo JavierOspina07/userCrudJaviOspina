@@ -3,7 +3,7 @@ import FormUser from "./components/FormUser";
 import UserCard from "./components/UserCard";
 import useFetch from "./hook/useFetch";
 import InfoMessage from "./components/InfoMessage";
-import useDarkMode from './components/useDarkMode'
+import useDarkMode from "./components/useDarkMode";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -20,11 +20,17 @@ function App() {
   /* Darkmode */
   const [darkMode, setDarkMode] = useDarkMode();
   // estos son los mismos del useFetch pero los nombres depende del contexto ↓
-  const [users, getAllUsers, createNewUser, deleteUserById, updateUserById] =
-    useFetch(
-      baseUrl,
-      setCloseForm
-    ); /* el setCloseForm: al no ser useFetch un componente se debe pasar como callback */
+  const [
+    users,
+    getAllUsers,
+    createNewUser,
+    deleteUserById,
+    updateUserById,
+    isLoading,
+  ] = useFetch(
+    baseUrl,
+    setCloseForm
+  ); /* el setCloseForm: al no ser useFetch un componente se debe pasar como callback */
 
   /* visualizacion del formulario */
   const handleOpenForm = () => {
@@ -64,76 +70,89 @@ function App() {
 
   return (
     <div className="users">
-      <div className="users__header">
-        <h1 className="users__title">Users</h1>
-        <button
-          onClick={handleOpenForm}
-          className="users__form-btn formuser__btn-open-form"
-        >
-          Open Form
-        </button>
-        <div className="wrapper">
-        <input
-          type="checkbox"
-          id="hide-checkbox"
-          defaultChecked={!darkMode}
-          onChange={handleToggleDarkMode}
-        />
-        <label htmlFor="hide-checkbox" className="toggle">
-          <span className="toggle-button">
-            <span className="crater crater-1"></span>
-            <span className="crater crater-2"></span>
-            <span className="crater crater-3"></span>
-            <span className="crater crater-4"></span>
-            <span className="crater crater-5"></span>
-            <span className="crater crater-6"></span>
-            <span className="crater crater-7"></span>
-          </span>
-          <span className="star star-1"></span>
-          <span className="star star-2"></span>
-          <span className="star star-3"></span>
-          <span className="star star-4"></span>
-          <span className="star star-5"></span>
-          <span className="star star-6"></span>
-          <span className="star star-7"></span>
-          <span className="star star-8"></span>
-        </label>
-      </div>
-      </div>
+      {isLoading ? (
+        <div className="loader__countainer">
+          <div className="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      ) : (
+        <>
+          <div className="users__header">
+            <h1 className="users__title">Users</h1>
+            <button
+              onClick={handleOpenForm}
+              className="users__form-btn formuser__btn-open-form"
+            >
+              Open Form
+            </button>
+            <div className="wrapper">
+              <input
+                type="checkbox"
+                id="hide-checkbox"
+                defaultChecked={!darkMode}
+                onChange={handleToggleDarkMode}
+              />
+              <label htmlFor="hide-checkbox" className="toggle">
+                <span className="toggle-button">
+                  <span className="crater crater-1"></span>
+                  <span className="crater crater-2"></span>
+                  <span className="crater crater-3"></span>
+                  <span className="crater crater-4"></span>
+                  <span className="crater crater-5"></span>
+                  <span className="crater crater-6"></span>
+                  <span className="crater crater-7"></span>
+                </span>
+                <span className="star star-1"></span>
+                <span className="star star-2"></span>
+                <span className="star star-3"></span>
+                <span className="star star-4"></span>
+                <span className="star star-5"></span>
+                <span className="star star-6"></span>
+                <span className="star star-7"></span>
+                <span className="star star-8"></span>
+              </label>
+            </div>
+          </div>
 
-      <InfoMessage
-        closeInfo={closeInfo}
-        setCloseInfo={setCloseInfo}
-        deletedUserName={deletedUserName}
-        addedUserName={addedUserName}
-        updateUserName={updateUserName}
-      />
-
-      <FormUser
-        createNewUser={createNewUser}
-        updateInfo={updateInfo}
-        updateUserById={updateUserById}
-        setUpdateInfo={setUpdateInfo}
-        closeForm={closeForm}
-        setCloseForm={setCloseForm}
-        showAddMessage={showAddMessage}
-        showUpdateMessage={showUpdateMessage}
-      />
-
-      <div className="users__list">
-        {users?.map((user) => (
-          <UserCard
-            key={user.id}
-            user={user}
-            deleteUserById={deleteUserById}
-            setUpdateInfo={setUpdateInfo}
-            handleOpenForm={handleOpenForm}
+          <InfoMessage
             closeInfo={closeInfo}
             setCloseInfo={setCloseInfo}
-            showDeleteMessage={showDeleteMessage}
+            deletedUserName={deletedUserName}
+            addedUserName={addedUserName}
+            updateUserName={updateUserName}
           />
-        ))}
-      </div>
+
+          <FormUser
+            createNewUser={createNewUser}
+            updateInfo={updateInfo}
+            updateUserById={updateUserById}
+            setUpdateInfo={setUpdateInfo}
+            closeForm={closeForm}
+            setCloseForm={setCloseForm}
+            showAddMessage={showAddMessage}
+            showUpdateMessage={showUpdateMessage}
+          />
+
+          <div className="users__list">
+            {users?.map((user) => (
+              <UserCard
+                key={user.id}
+                user={user}
+                deleteUserById={deleteUserById}
+                setUpdateInfo={setUpdateInfo}
+                handleOpenForm={handleOpenForm}
+                closeInfo={closeInfo}
+                setCloseInfo={setCloseInfo}
+                showDeleteMessage={showDeleteMessage}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }

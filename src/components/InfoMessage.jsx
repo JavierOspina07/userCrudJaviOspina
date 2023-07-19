@@ -10,7 +10,7 @@ const InfoMessage = ({
   const handleCloseInfo = () => {
     setCloseInfo(true);
   };
-  
+        
   return (
     <div
       onClick={handleCloseInfo}
