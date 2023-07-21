@@ -10,7 +10,7 @@ const FormUser = ({
   closeForm,
   setCloseForm,
   showAddMessage,
-  showUpdateMessage
+  showUpdateMessage,
 }) => {
   const { register, reset, handleSubmit } = useForm();
 
@@ -32,13 +32,11 @@ const FormUser = ({
       password: "",
       birthday: "",
     });
-        // Llamada a showInfoMessage para mostrar el mensaje de InfoMessage
-    if (!updateInfo) {
-      showAddMessage(`${data.first_name} ${data.last_name}`);
-    }else{
-      showUpdateMessage(`${data.first_name} ${data.last_name}`)
-    }
+    // Llamada a showInfoMessage para mostrar el mensaje de InfoMessage
 
+    !updateInfo
+      ? showAddMessage(`${data.first_name} ${data.last_name}`)
+      : showUpdateMessage(`${data.first_name} ${data.last_name}`);
   };
 
   const handleCloseForm = () => {

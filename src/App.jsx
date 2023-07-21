@@ -13,8 +13,8 @@ function App() {
   const [updateInfo, setUpdateInfo] = useState();
   /* manejo del baseUrl */
   const baseUrl = "https://users-crud.academlo.tech";
-  const [deletedUserName, setDeletedUserName] = useState();
   /* modificaciones en el modal de agregar, eliminar, actualizar usuario */
+  const [deletedUserName, setDeletedUserName] = useState();
   const [addedUserName, setAddedUserName] = useState();
   const [updateUserName, setUpdateUserName] = useState();
   /* Darkmode */
