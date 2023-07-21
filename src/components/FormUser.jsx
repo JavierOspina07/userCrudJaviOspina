@@ -19,11 +19,14 @@ const FormUser = ({
   }, [updateInfo]);
 
   const submit = (data) => {
+    // Llamada a showInfoMessage para mostrar el mensaje de InfoMessage
     updateInfo
       ? /* Update */ (updateUserById("/users", updateInfo.id, data),
-        setUpdateInfo())
+        setUpdateInfo(),
+        showUpdateMessage(`${data.first_name} ${data.last_name}`))
       : /* Create */
-        createNewUser("/users", data);
+        (createNewUser("/users", data),
+        showAddMessage(`${data.first_name} ${data.last_name}`));
 
     reset({
       first_name: "",
@@ -32,12 +35,7 @@ const FormUser = ({
       password: "",
       birthday: "",
     });
-    // Llamada a showInfoMessage para mostrar el mensaje de InfoMessage
-
-    !updateInfo
-      ? showAddMessage(`${data.first_name} ${data.last_name}`)
-      : showUpdateMessage(`${data.first_name} ${data.last_name}`)
-      
+    
   };
 
   const handleCloseForm = () => {
