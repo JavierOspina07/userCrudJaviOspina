@@ -36,7 +36,8 @@ const FormUser = ({
 
     !updateInfo
       ? showAddMessage(`${data.first_name} ${data.last_name}`)
-      : showUpdateMessage(`${data.first_name} ${data.last_name}`);
+      : showUpdateMessage(`${data.first_name} ${data.last_name}`)
+      
   };
 
   const handleCloseForm = () => {
