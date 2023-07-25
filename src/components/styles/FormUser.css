@@ -12,8 +12,8 @@
   transition: transform 200ms ease;
 }
 
-.close-form{
-    transform: scale(0);
+.close-form {
+  transform: scale(0);
 }
 
 .formuser {
@@ -43,7 +43,6 @@
   color: red;
   filter: brightness(1.2);
 }
-
 
 .formuser__group {
   display: flex;
