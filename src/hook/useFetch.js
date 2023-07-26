@@ -30,7 +30,6 @@ const useFetch = (baseUrl, setCloseForm) => {
         console.log(err)
       })
       .finally(() => setIsLoading(false))
-      
   };
   //DELETE
   const deleteApi = (path, id) => {
@@ -45,7 +44,6 @@ const useFetch = (baseUrl, setCloseForm) => {
       })
       .catch((err) => console.log(err))
       .finally(() => setIsLoading(false))
-
   };
   //UPDATE
   const updateApi = (path, id, data) => {
