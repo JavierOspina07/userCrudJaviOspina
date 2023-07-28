@@ -78,5 +78,5 @@
 
 .formuser__btn:hover {
   filter: brightness(1.2);
-  box-shadow: 0 0 20px rgba(1, 71, 146, 0.8);
+  box-shadow: 0 0 20px #014792cc;
 }
