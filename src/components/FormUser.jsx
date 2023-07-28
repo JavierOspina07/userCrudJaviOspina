@@ -45,7 +45,7 @@ const FormUser = ({
   return (
     <div
       onClick={handleCloseForm}
-      className={`formuser-countainer ${closeForm && "close-form"}`}
+      className={`formuser-container ${closeForm && "close-form"}`}
     >
       <form
         onClick={(e) => e.stopPropagation()}
